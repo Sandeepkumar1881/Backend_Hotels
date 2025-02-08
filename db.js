@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const mongoURL = process.env.MONGO_URL
 
-mongoose.connect(MONGO_URL, {
+mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     tlsAllowInvalidCertificates: true

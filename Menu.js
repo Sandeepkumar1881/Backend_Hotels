@@ -14,6 +14,6 @@ app.get('/', (req, res) => {
 app.use('/', Router);
 app.use('/',Routers);
 //using listener for server
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT || 3000,()=>{
   console.log('server is running on port',process.env.PORT);
 })
