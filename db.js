@@ -2,10 +2,12 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const mongoURL = process.env.MONGO_URL
 
-mongoose.connect(mongoURL, {
-     useNewUrlParser: true,
-     useUnifiedTopology: true
-});
+mongoose.connect(MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tlsAllowInvalidCertificates: true
+  });
+  
 const db = mongoose.connection;
 
 db.on('connected', () => {
